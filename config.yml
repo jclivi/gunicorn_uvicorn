@@ -1,0 +1,9 @@
+framework:
+    gunicorn_options:
+        bind: "0.0.0.0:20203"
+        graceful_timeout: 1
+        worker_class: "uvicorn.workers.UvicornWorker"
+        workers: 1
+        proc_name: "serverA"
+        pidfile: "./logs/serverA.pid"
+        
