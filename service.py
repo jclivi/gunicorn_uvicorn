@@ -33,7 +33,7 @@ class Service(object):
             await self._uvicorn_response(send, self._message)
             return
         finally:
-            log.debug(e)
+            pass
 
     async def _uvicorn_response(self, send, message):
         status = message.get("status")
